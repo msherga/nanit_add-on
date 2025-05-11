@@ -1,13 +1,28 @@
-name: Nanit Stream
+name: "Nanit Stream"
+url: "https://github.com/msherga/nanit_add-on"
+description: "Stream your Nanit baby monitor camera into Home Assistant"
 version: "1.0"
-slug: nanit_stream
-description: Streams Nanit camera using previously authenticated integration
+slug: "nanit_stream"
+homeassistant_api: false
+init: false
+host_network: true
 startup: application
 boot: auto
-init: false
-homeassistant_api: false
-host_network: true
 map:
   - config:rw
-options: {}
-schema: {}
+services:
+  - "mqtt:want"
+
+options:
+  Email: ""
+  Password: ""
+  RefreshInterval: 10
+
+schema:
+  Email: str
+  Password: password
+  RefreshInterval: int
+
+arch:
+  - amd64
+  - armv7
