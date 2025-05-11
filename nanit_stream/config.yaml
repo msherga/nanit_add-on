@@ -1,12 +1,13 @@
-name: "Nanit Stream",
-version: "1.0",
-slug: "nanit_stream",
-description: "Streams Nanit camera using previously authenticated integration",
-startup: "application",
-boot: "auto",
-init: false,
-homeassistant_api: false,
-host_network: true,
-map: ["config:rw"],
-options: {},
+name: Nanit Stream
+version: "1.0"
+slug: nanit_stream
+description: Streams Nanit camera using previously authenticated integration
+startup: application
+boot: auto
+init: false
+homeassistant_api: false
+host_network: true
+map:
+  - config:rw
+options: {}
 schema: {}
